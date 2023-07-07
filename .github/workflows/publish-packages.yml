@@ -9,7 +9,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
         with:
-          repo-token: ${{ secrets.github_token }}
+          token: ${{ secrets.github_token }}
       - uses: actions/setup-node@v2
       - name: Bump version and publish
         run: |
@@ -19,4 +19,4 @@ jobs:
           message: Show GitHub Actions logo
           committer_name: GitHub Actions
           committer_email: actions@github.com
-          push: true
+          push: --force
