@@ -1,10 +1,10 @@
 name: Publish Packages
 on:
   workflow_dispatch:
-permissions: read-all|write-all
 jobs:
   publish_packages:
     runs-on: ubuntu-latest
+    permissions: write-all
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
