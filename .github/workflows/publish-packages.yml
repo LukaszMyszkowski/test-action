@@ -1,0 +1,15 @@
+name: Publish Packages
+on:
+  workflow_dispatch:
+jobs:
+  publish_packages:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+      - name: Install Dependencies
+        run: npm install
+      - name: Bump version and publish
+        run: |
+          npm version

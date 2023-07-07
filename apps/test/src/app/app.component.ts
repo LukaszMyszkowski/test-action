@@ -6,5 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  title = 'test';
+  disabled: boolean | undefined = false;
+  checked: boolean | undefined = false;
+  indeterminate: boolean | undefined = true;
 }
