@@ -12,8 +12,7 @@ jobs:
         run: npm install
       - name: Bump version and publish
         run: |
-          npm version
-          git push
+          npm version patch
       - uses: EndBug/add-and-commit@v9
         with:
           default_author: github_actions
