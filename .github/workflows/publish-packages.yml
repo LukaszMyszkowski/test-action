@@ -8,12 +8,12 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
       - uses: actions/setup-node@v2
+      - name: Bump version and publish
+        run: |
+          npm version patch --no-git-tag-version
       - uses: EndBug/add-and-commit@v9
         with:
           message: Show GitHub Actions logo
           committer_name: GitHub Actions
           committer_email: actions@github.com
           push: true
-      - name: Bump version and publish
-        run: |
-          npm version patch --no-git-tag-version
