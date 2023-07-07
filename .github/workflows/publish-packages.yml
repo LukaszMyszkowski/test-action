@@ -17,6 +17,6 @@ jobs:
       - uses: EndBug/add-and-commit@v9
         with:
           message: Show GitHub Actions logo
-          committer_name: GitHub Actions
+          committer_name: GitHub Actionss
           committer_email: actions@github.com
-          push: --force
+          push: --fore
